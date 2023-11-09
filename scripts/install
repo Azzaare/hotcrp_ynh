@@ -10,6 +10,8 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 echo "Hello world!" > $install_dir/index.html
 chown -R www-data: "$install_dir"
 
+pwd
+
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
