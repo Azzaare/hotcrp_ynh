@@ -1,1 +1,1 @@
-This app is only meant to be a minimalist app demontrating the v2 packaging format
+This is a dummy description of this app features
