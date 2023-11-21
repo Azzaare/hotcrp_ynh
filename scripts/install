@@ -176,7 +176,7 @@ ynh_script_progression --message="Finalizing installation..." --weight=1
 ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
 
 cd $install_dir
-source "lib/createdb.sh"
+/bin/sh -c "echo 'ok\n$db_user\n$db_pwd\nn\nY\n' | sh lib/createdb.sh --user=root --password=root"
 
 #=================================================
 # GENERIC FINALIZATION

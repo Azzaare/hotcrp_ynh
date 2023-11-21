@@ -86,6 +86,7 @@ ram.runtime = "256M"
     # help.en = "Database name. NO SPACES ALLOWED."
     # type = "string"
 
+    # # TODO: make default answer possible 
     # [install.database_password]
     # help.en = "Password for database user."
     # type = "password"
@@ -133,7 +134,7 @@ ram.runtime = "256M"
     [resources.apt]
     # This will automatically install/uninstall the following apt packages
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "nginx, php7.4, php7.4-fpm, php7.4-intl, php7.4-mysql, mariadb-server, poppler-utils, zip"
+    packages = "nginx, php7.4, php7.4-fpm, php7.4-intl, php7.4-mysql, mariadb-server, poppler-utils, zip, postfix"
 
     [resources.database]
     # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
