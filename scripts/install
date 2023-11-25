@@ -143,7 +143,7 @@ ynh_script_progression --message="Finalizing installation..." --weight=1
 
 # cd $install_dir
 # /bin/sh -c "sh lib/createdb.sh --user=root --password=root"
-/bin/sh -c "echo 'ok\n$db_user\n$db_pwd\nn\nY\n' | sh $install_dir/lib/createdb.sh"
+/bin/sh -c "echo 'ok\n$db_user\n$db_pwd\nn\nY\n' | sh $install_dir/lib/createdb.sh --user=root --password=root"
 
 #=================================================
 # ADD A CONFIGURATION
