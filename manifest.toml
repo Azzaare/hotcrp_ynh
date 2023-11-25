@@ -86,6 +86,7 @@ ram.runtime = "256M"
     help.en = "Optional URL for this HotCRP install (empty by default)"
     type = "string"
     default = ""
+    optional = true
 
     [install.hotcrp_contact_name]
     help.en = "Full name for site contact (the person to contact about site problems). Usually the PC chair(s)."
@@ -102,6 +103,7 @@ ram.runtime = "256M"
     [install.sender_envelope_address]
     help.en = "Envelope sender address for email sent by HotCRP. Usually defaults to something like 'www-data@yourservername'. This email address should be connected to a valid mailbox or certain spam filters will reject email from HotCRP. Default to 'hotcrp_email_from'."
     type = "string"
+    optional = true
 
 [resources]
     # See the packaging documentation for the full set
