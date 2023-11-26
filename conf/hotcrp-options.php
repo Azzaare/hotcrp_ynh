@@ -209,7 +209,7 @@ $Opt["smartScoreCompare"] = true;
 //                   originate from localhost.
 
 
-$Opt["dsn"] = "mysql://"__DB_USER__.__DB_PWD__."@mysql:3306/".__DB_NAME__;
+$Opt["dsn"] = "mysql://"__DB_USER__.__DB_PWD__."@localhost/".__DB_NAME__;
 // EXTERNAL SOFTWARE CONFIGURATION
 //
 //   dbHost          Database host. Defaults to localhost.
