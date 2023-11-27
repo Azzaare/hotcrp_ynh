@@ -82,14 +82,28 @@ ram.runtime = "256M"
     help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
     type = "password"
 
-    # [install.database_name]
-    # help.en = "Database name. NO SPACES ALLOWED."
+    [install.hotcrp_paper_site]
+    help.en = "Optional URL for this HotCRP install (empty by default)"
+    type = "string"
+    default = ""
+    optional = true
+
+    [install.hotcrp_contact_name]
+    help.en = "Full name for site contact (the person to contact about site problems). Usually the PC chair(s)."
+    type = "string"
+
+    [install.hotcrp_email_contact]
+    help.en = "Email address for site contact."
+    type = "string"
+
+    [install.hotcrp_email_from]
+    help.en = "From: header for email sent by HotCRP. Should be a plausible email address for mail originating at the conference server."
+    type = "string"
+
+    # [install.sender_envelope_address]
+    # help.en = "Envelope sender address for email sent by HotCRP. Usually defaults to something like 'www-data@yourservername'. This email address should be connected to a valid mailbox or certain spam filters will reject email from HotCRP. Default to 'hotcrp_email_from'."
     # type = "string"
-
-    # [install.database_password]
-    # help.en = "Password for database user."
-    # type = "password"
-
+    # optional = true
 
 [resources]
     # See the packaging documentation for the full set
@@ -133,7 +147,7 @@ ram.runtime = "256M"
     [resources.apt]
     # This will automatically install/uninstall the following apt packages
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "nginx, php7.4, php7.4-fpm, php7.4-intl, php7.4-mysql, mariadb-server, poppler-utils, zip"
+    packages = "nginx, php7.4, php7.4-fpm, php7.4-intl, php7.4-mysql, mariadb-server, poppler-utils, zip, postfix"
 
     [resources.database]
     # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
