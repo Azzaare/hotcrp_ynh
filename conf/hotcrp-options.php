@@ -16,9 +16,9 @@ global $Opt;
 //   dbUser          Database user name. Defaults to $Opt["dbName"].
 //   dbPassword      Password for database user.
 
-$Opt["dbName"] = __DB_USER__;
-$Opt["dbUser"] = __DB_NAME__;
-$Opt["dbPassword"] = __DB_PWD__;
+$Opt["dbName"] = "__DB_USER__";
+$Opt["dbUser"] = "__DB_NAME__";
+$Opt["dbPassword"] = "__DB_PWD__";
 
 
 // GENERAL CONFIGURATION
@@ -44,8 +44,8 @@ $Opt["dbPassword"] = __DB_PWD__;
 //                   emails. Default is derived from the access URL.
 //   conferenceSite  [OPTIONAL] Conference site URL (CFP, registration).
 
-if(!empty(__HOTCRP_PAPER_SITE__))
-    $Opt["paperSite"] = __HOTCRP_PAPER_SITE__;
+//if(!empty(__HOTCRP_PAPER_SITE__))
+$Opt["paperSite"] = "__DOMAIN____PATH__";
 
 // EMAIL
 //
@@ -83,11 +83,12 @@ if(!empty(__HOTCRP_PAPER_SITE__))
 //                   always safe to set postfixMailer to true, although the
 //                   resulting mails may not be standards compliant.
 
-$Opt["contactName"] = __HOTCRP_CONTACT_NAME__;
-$Opt["contactEmail"] = __HOTCRP_EMAIL_CONTACT__;
+$Opt["contactName"] = "__HOTCRP_CONTACT_NAME__";
+$Opt["contactEmail"] = "__HOTCRP_EMAIL_CONTACT__";
 $Opt["sendEmail"] = true;
-$Opt["emailFrom"] = __HOTCRP_EMAIL_FROM__;
-$Opt["emailSender"] = empty(__SENDER_ENVELOPE_ADDRESS__) ? __HOTCRP_EMAIL_FROM__ : __SENDER_ENVELOPE_ADDRESS__;
+$Opt["emailFrom"] = "__HOTCRP_EMAIL_FROM__";
+// $Opt["emailSender"] = empty(_SENDER_ENVELOPE_ADDRESS_) ? "__HOTCRP_EMAIL_FROM__" : "_SENDER_ENVELOPE_ADDRESS_";
+$Opt["emailSender"] ="__HOTCRP_EMAIL_FROM__";
 $Opt["internalMailer"] = true;
 
 // -------------------------------------------------------------------------
@@ -209,7 +210,7 @@ $Opt["smartScoreCompare"] = true;
 //                   originate from localhost.
 
 
-$Opt["dsn"] = "mysql://"__DB_USER__.__DB_PWD__."@localhost/".__DB_NAME__;
+$Opt["dsn"] = "mysql://__DB_USER__:__DB_PWD__@localhost:3306/__DB_NAME__";
 // EXTERNAL SOFTWARE CONFIGURATION
 //
 //   dbHost          Database host. Defaults to localhost.

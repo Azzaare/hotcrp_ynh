@@ -100,10 +100,10 @@ ram.runtime = "256M"
     help.en = "From: header for email sent by HotCRP. Should be a plausible email address for mail originating at the conference server."
     type = "string"
 
-    [install.sender_envelope_address]
-    help.en = "Envelope sender address for email sent by HotCRP. Usually defaults to something like 'www-data@yourservername'. This email address should be connected to a valid mailbox or certain spam filters will reject email from HotCRP. Default to 'hotcrp_email_from'."
-    type = "string"
-    optional = true
+    # [install.sender_envelope_address]
+    # help.en = "Envelope sender address for email sent by HotCRP. Usually defaults to something like 'www-data@yourservername'. This email address should be connected to a valid mailbox or certain spam filters will reject email from HotCRP. Default to 'hotcrp_email_from'."
+    # type = "string"
+    # optional = true
 
 [resources]
     # See the packaging documentation for the full set
