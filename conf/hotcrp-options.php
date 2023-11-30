@@ -44,8 +44,10 @@ $Opt["dbPassword"] = "__DB_PWD__";
 //                   emails. Default is derived from the access URL.
 //   conferenceSite  [OPTIONAL] Conference site URL (CFP, registration).
 
-//if(!empty(__HOTCRP_PAPER_SITE__))
-$Opt["paperSite"] = "__DOMAIN____PATH__";
+if(!empty("__HOTCRP_PAPER_SITE__")) {
+    $Opt["paperSite"] = "__HOTCRP_PAPER_SITE__";
+}
+
 
 // EMAIL
 //
